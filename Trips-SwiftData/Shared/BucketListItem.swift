@@ -21,9 +21,7 @@ import SwiftData
         self.hasReservation = hasReservation
         self.isInPlan = isInPlan
     }
-}
 
-extension BucketListItem {
     static var preview: BucketListItem {
         let item = BucketListItem(
             title: "A bucket list item title",

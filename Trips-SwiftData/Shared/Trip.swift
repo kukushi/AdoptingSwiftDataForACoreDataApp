@@ -30,6 +30,11 @@ import SwiftData
         self.startDate = startDate
         self.endDate = endDate
     }
+    
+    static var preview: Trip {
+        Trip(name: "Trip Name", destination: "Trip destination",
+             startDate: .now, endDate: .now.addingTimeInterval(4 * 3600))
+    }
 }
  
 extension Trip {
@@ -48,11 +53,6 @@ extension Trip {
     @Transient
     var displayDestination: String {
         destination.isEmpty ? "Untitled Destination" : destination
-    }
-    
-    static var preview: Trip {
-        Trip(name: "Trip Name", destination: "Trip destination",
-             startDate: .now, endDate: .now.addingTimeInterval(4 * 3600))
     }
 }
 
