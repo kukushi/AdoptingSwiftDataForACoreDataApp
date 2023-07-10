@@ -121,7 +121,10 @@ struct TripsWidgetEntryView: View {
     }
 }
 
-@MainActor #Preview {
-    TripsWidgetEntryView()
-        .modelContainer(PreviewSampleData.container)
+//@MainActor #Preview {
+#Preview {
+    MainActor.assumeIsolated {
+        TripsWidgetEntryView()
+            .modelContainer(PreviewSampleData.container)
+    }
 }
